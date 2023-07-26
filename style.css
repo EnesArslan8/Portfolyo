@@ -1,0 +1,964 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+*{
+    border: 0;
+    outline: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-decoration: none;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #659AA6;
+    padding: 6rem;
+    position: relative;
+    height: 22rem;
+}
+header img{
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 5rem;
+    left: 20rem;
+}
+header .header-area{
+    position: absolute;
+    top: 12rem;
+    left: 50rem;
+}
+header .header-area span{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+header .header-area p{
+    font-size: 5rem;
+    margin: 1.5rem 0;
+    color: #fff;
+}
+header .header-area input{
+    cursor: pointer;
+    border-radius: 2rem;
+    width: 8rem;
+    height: 2.5rem;
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    transition: 200ms all;
+    font-size: 1.2rem;
+}
+header .header-area input:hover{
+    background-color: #fff;
+    color: #000;
+}
+main{
+    margin-bottom: 17rem;
+}
+main .letteronletter{
+    position: relative;
+}
+main .letteronletter .in{
+    position: absolute;
+    padding: 3rem 0 0 2rem;
+    top: 0;
+    left: 35%;
+    font-size: 12rem;
+    font-family: 'Londrina Outline', cursive;
+    color: #9a9a9a;
+}
+main .letteronletter .on{
+    position: absolute;
+    padding: 7rem 0 0 2rem;
+    top: 0;
+    left: 40%;
+    letter-spacing: .5rem;
+    font-size: 3rem;
+    color: #659AA6;
+    font-weight: 600;
+    font-family: 'Anton', sans-serif;
+}
+.container{
+    position: relative;
+}
+.container .about-me{
+    display: flex;
+    margin: 0 10rem;
+}
+.container .about-me img{
+    border-radius: 2rem;
+    width: 30%;
+    height: 30%;
+    margin: 0 2rem 0 0;
+}
+.container .about-me .about{
+    display: flex;
+    flex-direction: column;
+    
+}
+.container .about-me .about h1{
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 2rem 0 0 0;
+    margin-bottom: 1.5rem;
+    color: #555;
+}
+.container .about-me .about p{
+    color: #777;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+}
+.container .about-me .about .me{
+    display: flex;
+}
+.container .about-me .about .me .me-left{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.3rem;
+    margin-right: 5rem;
+}
+.container .about-me .about .me .me-left p{
+    display: flex;
+    padding:.7rem 0;
+}
+.container .about-me .about .me .me-left span.me{
+    color: #000;
+}
+.container .about-me .about .me .me-right{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.3rem;
+}
+.container .about-me .about .me .me-right p{
+    display: flex;
+    padding:.7rem 0;
+}
+.container .about-me .about .me .me-right span.me{
+    color: #000;
+}
+.container .buttons input{
+    cursor: pointer;
+    margin-right: 1.5rem;
+    margin-top: 1rem;
+    border-radius: 2rem;
+    width: 8rem;
+    height: 2.5rem;
+    background-color: transparent;
+    border: 1px solid #659AA6;
+    color: #659AA6;
+    transition: 200ms all;
+    font-size: 1.2rem;
+    transition: 200ms all;
+}
+.container .buttons input:hover{
+    color: #fff;
+    background-color: #659AA6;
+}
+.container .education-title{
+    position: relative;
+}
+.container .education-title .quality{
+    position: absolute;
+    padding: 3rem 0 0 2rem;
+    top: 0;
+    left: 33%;
+    font-size: 12rem;
+    font-family: 'Londrina Outline', cursive;
+    color: #9a9a9a;
+}
+.container .education-title .edu{
+    position: absolute;
+    padding: 8rem 0 0 2rem;
+    top: 0;
+    left: 35%;
+    letter-spacing: .5rem;
+    font-size: 2rem;
+    color: #659AA6;
+    font-weight: 600;
+    font-family: 'Anton', sans-serif;
+}
+.container .myeducation{
+    display: flex;
+    flex-direction: column;
+    margin: 3rem 21.5rem;
+    width: 30rem;
+    display: flex;
+    
+    position: absolute;
+    top:43rem;
+}
+.container .myeducation i{
+    margin-top: 0.7rem;
+    color: #659AA6;
+    position: absolute;
+    left: -0.52rem;
+}
+.container .myeducation .eduinfo{
+    border-left: 1.2px solid #659AA6;
+}
+.container .myeducation .eduinfo .edu-info{
+    margin-left: 1rem;
+    margin-top: 0.7rem;
+}
+.container .myeducation span.title{
+    padding: 1rem;
+    margin-left: -1rem;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #555;
+}
+.container .myeducation .eduinfo .edu-info h3{
+    color: #555;
+    margin:0 0 0.7rem 0.7rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+.container .myeducation .eduinfo .edu-info span.school{
+    color:#777;
+    margin:0 0 1rem 0.7rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+.container .myeducation .eduinfo .edu-info p{
+    color:#777;
+    margin:0.7rem 0 0.7rem 0.7rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+}
+/**/
+.container .myexpericence{
+    display: flex;
+    flex-direction: column;
+    margin: 3rem 21.5rem;
+    width: 30rem;
+    display: flex;
+    position: absolute;
+    top:43rem;
+    left: 40rem;
+}
+.container .myexpericence i{
+    margin-top: 0.7rem;
+    color: #659AA6;
+    position: absolute;
+    left: -0.52rem;
+}
+.container .myexpericence .expinfo{
+    border-left: 1.2px solid #659AA6;
+}
+.container .myexpericence .expinfo .exp-info{
+    margin-left: 1rem;
+    margin-top: 0.7rem;
+}
+.container .myexpericence span.title{
+    padding: 1rem;
+    margin-left: -1rem;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #555;
+}
+.container .myexpericence .expinfo .exp-info h3{
+    color: #555;
+    margin:0 0 0.7rem 0.7rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+.container .myexpericence .expinfo .exp-info span.school{
+    color:#777;
+    margin:0 0 1rem 0.7rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+.container .myexpericence .expinfo .exp-info p{
+    color:#777;
+    margin:0.7rem 0 0.7rem 0.7rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+}
+footer .contact-title{
+    position: relative;
+}
+footer .contact-title .quality{
+    position: absolute;
+    padding: 3rem 0 0 2rem;
+    top: 51rem;
+    left: 33%;
+    font-size: 12rem;
+    font-family: 'Londrina Outline', cursive;
+    color: #9a9a9a;
+}
+footer .contact-title .edu{
+    position: absolute;
+    padding: 8rem 0 0 2rem;
+    top: 51rem;
+    left: 42%;
+    letter-spacing: .5rem;
+    font-size: 2.5rem;
+    color: #659AA6;
+    font-weight: 600;
+    font-family: 'Anton', sans-serif;
+}
+footer .contact .contact-area {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    left: 37%;
+    top: 65rem;    
+    margin-top: 4rem;
+}
+footer .contact .contact-area{
+    display: inline-flex;
+    flex-direction: column;
+}
+footer .contact .contact-area .name-area {
+    display: inline-flex;
+}
+footer .contact input{
+    padding: 1rem 2rem;
+    border: 1px solid #9a9a9a;
+    border-radius: 3rem;
+    margin: 0.8rem;
+}
+footer .contact .contact-area .text{
+    padding: 1rem 2rem;
+    border: 1px solid #9a9a9a; 
+    border-radius: 3rem;
+    margin: .8rem;
+}
+footer .contact .contact-area input.buton{
+    padding: 1rem 2rem;
+    width: 12rem;
+    background-color: transparent;
+    border: 1px solid #659AA6; 
+    border-radius: 3rem;
+    color: #659AA6;
+    font-weight: 600;
+    margin: .8rem 30%;
+}
+footer .contact .contact-area input.buton:hover{
+    background-color: #659AA6;
+    transition: 200ms all;
+    color: #fff;
+}
+footer .contact .contact-area input:focus{
+    box-shadow:8px 10px #659AA6;
+    transition: 200ms all;
+}
+footer .contact .contact-area textarea:focus{
+    box-shadow:8px 10px #659AA6;
+    transition: 200ms all;
+}
+footer .footer{
+    position: relative;
+    top: 73rem;
+    width: 100%;
+    height: 12rem;
+    background-color: #659AA6;
+}
+footer .footer .icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+footer .footer .icons span{
+    background-color: #fff;
+    margin-top: 4rem;
+    border-radius: 50%;
+    padding: .5rem;
+    margin-right: .5rem;
+}
+footer .footer .icons span:hover{
+    transition: 200ms all;
+    cursor: pointer;
+}
+footer .footer .icons span i{
+    font-size: 1.5rem;
+}
+footer .footer .icons span i.fa-twitter:hover{
+    color:#00acee;
+    transition: 200ms all;
+}
+footer .footer .icons span i.fa-facebook:hover{
+    color: #3b5998;
+    transition: 200ms all;
+}
+footer .footer .icons span i.fa-linkedin:hover{
+    color:#0072b1;
+    transition: 200ms all;
+}
+footer .footer .icons span i.fa-instagram:hover{
+    color: #E1306C;
+    transition: 200ms all;
+}
+footer .footer .terms {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    cursor: pointer;
+}
+footer .footer .terms span{
+    padding: 0.5rem;
+}
+footer .footer .terms span:hover{
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 600px){
+    header{
+        position: relative;
+        height: 43rem;
+        width: 100%;
+    }
+    header .img{
+        position: absolute;
+        left: -14rem;
+        top: -3rem;
+    }
+    header .header-area{
+        position: absolute;
+        left: 3.5rem;
+        top: 30rem;
+    }
+    header .header-area span{
+        font-size: 1.5rem;
+    }
+    header .header-area p{
+        font-size: 4rem;
+    }
+    main{
+        width: 100%;
+    }
+    main .letteronletter{
+        position: relative;
+        margin-top: 2rem;
+        margin-bottom: -2rem;
+    }
+    main .letteronletter .in{
+        position: absolute;
+        padding: 3rem 0 0 2rem;
+        top: 0;
+        left: 18%;
+        font-size: 9rem;
+    }
+    main .letteronletter .on{
+        position: absolute;
+        padding: 7rem 0 0 2rem;
+        top: -1rem;
+        left: 25%;
+        letter-spacing: .5rem;
+        font-size: 3rem;
+        font-weight: 600;
+    }
+    .container{
+        position: relative;
+        padding: 2rem 0 0 1rem;
+    }
+    .container .about-me{
+        display: flex;
+        flex-direction: column;
+        margin:0rem 0rem 2rem 0rem;
+    }
+    .container .about-me img{
+        border-radius: 2rem;
+        width: 85%;
+        height: 35%;
+        margin: 0 0 2rem 2rem;
+    }
+    .container .about-me .about h1{
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+    }
+    .container .about-me .about p{
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+    }
+    .container .about-me .about .me .me-left{
+        font-size: 1rem;
+        margin-right: .5rem;
+    }
+    .container .about-me .about .me .me-left p{
+        padding:.5rem 0;
+    }
+    .container .about-me .about .me .me-left span.me{
+        font-size: 1.2rem;
+    }
+    .container .about-me .about .me .me-right{
+        font-size: 1rem;
+    }
+    .container .about-me .about .me .me-right p{
+        padding:.5rem 0;
+    }
+    .container .about-me .about .me .me-right span.me{
+        font-size: 1.2rem;
+    }
+    .container .buttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .container .buttons input{
+        cursor: pointer;
+        margin-right: 1.5rem;
+        margin-top: 1rem;
+        border-radius: 2rem;
+        width: 8rem;
+        height: 2rem;
+        border: 1px solid #659AA6;
+        transition: 200ms all;
+        font-size: 1rem;
+        transition: 200ms all;
+    }
+    .container .education-title{
+        position: relative;
+    }
+    .container .education-title .quality{
+        position: absolute;
+        padding: 3rem 0 0 2rem;
+        top: 0;
+        left: 8%;
+        font-size: 9rem;
+    }
+    .container .education-title .edu{
+        position: absolute;
+        padding: 8rem 0 0 2rem;
+        top: -2.5rem;
+        left: 26%;
+        letter-spacing: .5rem;
+        font-size: 2rem;
+        font-weight: 600;
+    }
+    .container .myeducation{
+        margin: 3rem 2rem;
+        width: 30rem;
+        position: absolute;
+        top:75rem;
+    }
+    .container .myexpericence{
+        margin: 3rem 2rem;
+        width: 30rem;
+        position: absolute;
+        top:110rem;
+        left: 1.1rem;
+    }
+    footer .contact-title{
+        position: relative;
+        margin-top: 3rem;
+    }
+    footer .contact-title .quality{
+        position: absolute;
+        padding: 3rem 0 0 2rem;
+        top: 83rem;
+        left: 8%;
+        font-size: 9rem;
+    }
+    footer .contact-title .edu{
+        position: absolute;
+        padding: 8rem 0 0 2rem;
+        top: 81.5rem;
+        left: 25%;
+        letter-spacing: .5rem;
+        font-size: 2.5rem;
+        font-weight: 600;
+    }
+    footer .contact .contact-area {
+        position: relative;
+        display: inline-flex;
+        flex-direction: column;
+        left: 12%;
+        top: 91rem;    
+        margin-top: 4rem;
+    }
+    footer .footer{
+        position: relative;
+        top: 100rem;
+        width: 100%;
+        height: 12rem;
+        background-color: #659AA6;
+    }
+}
+@media  (min-width:601px) and (max-width:768px) {
+    header{
+        position: relative;
+        height: 43rem;
+        width: 100%;
+    }
+    header .img{
+        position: absolute;
+        left: -10rem;
+        top: 0rem;
+    }
+    header .header-area{
+        position: absolute;
+        left: 3.5rem;
+        top: 33rem;
+    }
+    header .header-area span{
+        font-size: 1.5rem;
+    }
+    header .header-area p{
+        font-size: 5rem;
+    } 
+    main{
+        width: 100%;
+    }
+    main .letteronletter{
+        position: relative;
+        margin-top: 2rem;
+        margin-bottom: -2rem;
+    }
+    main .letteronletter .in{
+        position: absolute;
+        top: 0;
+        left: 20%;
+        font-size: 11rem;
+    }
+    main .letteronletter .on{
+        position: absolute;
+        top: 0rem;
+        left: 27%;
+        font-size: 4rem;
+    }
+    .container{
+        position: relative;
+        padding: 2rem 0 0 1rem;
+    }
+    .container .about-me{
+        display: flex;
+        flex-direction: column;
+        margin:0rem 0rem 2rem 0rem;
+    }
+    .container .about-me img{
+        border-radius: 2rem;
+        width: 85%;
+        height: 35%;
+        margin: 0 0 2rem 2rem;
+    }
+    .container .about-me .about h1{
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+    }
+    .container .about-me .about p{
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+    }
+    .container .about-me .about .me .me-left{
+        font-size: 1rem;
+        margin-right: 2rem;
+    }
+    .container .about-me .about .me .me-left p{
+        padding:.5rem 0;
+    }
+    .container .about-me .about .me .me-left span.me{
+        font-size: 1.2rem;
+    }
+    .container .about-me .about .me .me-right{
+        font-size: 1rem;
+    }
+    .container .about-me .about .me .me-right p{
+        padding:.5rem 0;
+    }
+    .container .about-me .about .me .me-right span.me{
+        font-size: 1.2rem;
+    }
+    .container .buttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .container .buttons input{
+        cursor: pointer;
+        margin-right: 1.5rem;
+        margin-top: 1.5rem;
+        border-radius: 2rem;
+        width: 8rem;
+        height: 2rem;
+        border: 1px solid #659AA6;
+        transition: 200ms all;
+        font-size: 1rem;
+        transition: 200ms all;
+    }
+    .container .education-title{
+        position: relative;
+    }
+    .container .education-title .quality{
+        position: absolute;
+        padding: 0rem 0 0 2rem;
+        top: 0;
+        left: 8%;
+        font-size: 9rem;
+    }
+    .container .education-title .edu{
+        position: absolute;
+        padding: 5rem 0 0 2rem;
+        top: -2.5rem;
+        left: 26%;
+        letter-spacing: .5rem;
+        font-size: 2rem;
+        font-weight: 600;
+    }
+    .container .myeducation{
+        margin: 3rem 2rem;
+        width: 30rem;
+        position: absolute;
+        top:75rem;
+    }
+    .container .myexpericence{
+        margin: 3rem 2rem;
+        width: 30rem;
+        position: absolute;
+        top:110rem;
+        left: 1.1rem;
+    }
+    footer .contact-title{
+        position: relative;
+        margin-top: 3rem;
+    }
+    footer .contact-title .quality{
+        position: absolute;
+        padding: 3rem 0 0 2rem;
+        top: 80rem;
+        left: 8%;
+        font-size: 9rem;
+    }
+    footer .contact-title .edu{
+        position: absolute;
+        padding: 8rem 0 0 2rem;
+        top: 78.5rem;
+        left: 23%;
+        letter-spacing: .5rem;
+        font-size: 2.5rem;
+        font-weight: 600;
+    }
+    footer .contact .contact-area {
+        position: relative;
+        display: inline-flex;
+        flex-direction: column;
+        left: 12%;
+        top: 89rem;    
+        margin-top: 4rem;
+    }
+    footer .footer{
+        position: relative;
+        top: 100rem;
+        width: 100%;
+        height: 12rem;
+    }
+}
+@media  (min-width:769px) and (max-width:993px) {
+    header{
+        position: relative;
+        height: 24rem;
+        width: 100%;
+    }
+    header .img{
+        position: absolute;
+        left: -19rem;
+        top: 0rem;
+    }
+    header .header-area{
+        position: absolute;
+        left: 27rem;
+        top: 13rem;
+    }
+    header .header-area span{
+        font-size: 1.5rem;
+    }
+    header .header-area p{
+        font-size:2.7rem;
+    } 
+    main{
+        width: 100%;
+    }
+    main .letteronletter{
+        position: relative;
+        margin-top: 2rem;
+        margin-bottom: -2rem;
+    }
+    main .letteronletter .in{
+        position: absolute;
+        top: 0;
+        left: 20%;
+        font-size: 13rem;
+    }
+    main .letteronletter .on{
+        position: absolute;
+        top: 0rem;
+        left: 28%;
+        font-size: 5rem;
+    }
+    .container{
+        position: relative;
+        padding: 2rem 0 0 1rem;
+    }
+    .container .about-me{
+        display: flex;
+        flex-direction: column;
+        margin:0rem 0rem 2rem 2rem;
+    }
+    .container .about-me img{
+        border-radius: 2rem;
+        width: 85%;
+        height: 35%;
+        margin: 0 0 2rem 3rem;
+    }
+    .container .about-me .about h1{
+        font-size: 3rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+    }
+    .container .about-me .about p{
+        font-size: 1.4rem;
+        line-height: 1.6rem;
+    }
+    .container .about-me .about .me .me-left{
+        font-size: 2rem;
+        margin-right: 2rem;
+    }
+    .container .about-me .about .me .me-left p{
+        padding:.5rem 0;
+    }
+    .container .about-me .about .me .me-left span.me{
+        font-size: 1.5rem;
+    }
+    .container .about-me .about .me .me-right{
+        font-size: 1rem;
+    }
+    .container .about-me .about .me .me-right p{
+        padding:.5rem 0;
+    }
+    .container .about-me .about .me .me-right span.me{
+        font-size: 1.5rem;
+    }
+    .container .buttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 2rem;
+    }
+    .container .buttons input{
+        cursor: pointer;
+        margin-right: 1.5rem;
+        margin-top: 1.5rem;
+        border-radius: 2rem;
+        width: 10rem;
+        height: 3rem;
+        border: 1px solid #659AA6;
+        transition: 200ms all;
+        font-size: 1.3rem;
+        transition: 200ms all;
+    }
+    .container .education-title{
+        position: relative;
+    }
+    .container .education-title .quality{
+        position: absolute;
+        padding: 0rem 0 0 2rem;
+        top: 0;
+        left: 10%;
+        font-size: 12rem;
+    }
+    .container .education-title .edu{
+        position: absolute;
+        padding: 5rem 0 0 2rem;
+        top: -2rem;
+        left: 27%;
+        letter-spacing: .5rem;
+        font-size: 3.3rem;
+        font-weight: 600;
+    }
+    .container .myeducation{
+        margin: 3rem 4rem;
+        width: 20rem;
+        position: absolute;
+        top:83rem;
+    }
+    .container .myexpericence{
+        margin: 3rem 0rem;
+        width: 20rem;
+        position: absolute;
+        top:83rem;
+        left:26rem;
+    }
+    footer .contact-title{
+        position: relative;
+        margin-top: 3rem;
+    }
+    footer .contact-title .quality{
+        position: absolute;
+        padding: 3rem 0 0 2rem;
+        top: 55rem;
+        left: 15%;
+        font-size: 10rem;
+    }
+    footer .contact-title .edu{
+        position: absolute;
+        padding: 8rem 0 0 2rem;
+        top: 53.5rem;
+        left: 27%;
+        letter-spacing: .5rem;
+        font-size: 3.3rem;
+        font-weight: 600;
+    }
+    footer .contact .contact-area {
+        position: relative;
+        display: inline-flex;
+        flex-direction: column;
+        left: 20%;
+        top: 65rem;    
+        margin-top: 4rem;
+    }
+    footer .footer{
+        position: relative;
+        top: 75rem;
+        width: 100%;
+        height: 12rem;
+    }
+}
